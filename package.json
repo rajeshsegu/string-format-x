@@ -1,0 +1,58 @@
+{
+  "name": "string-format-x",
+  "description": "format string templates for any object",
+  "version": "1.0.0",
+  "author": "Rajesh Segu <rajesh.segu@gmail.com>",
+  "keywords": [
+    "object",
+    "format",
+    "string-format",
+    "template",
+    "object",
+    "fill"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeshsegu/string-format-x.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rajeshsegu/string-format-x/issues/new",
+    "email": "rajesh.segu@gmail.com"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "2.x"
+  },
+  "licenses": "MIT",
+  "main": "formatx.js",
+  "dependencies": {
+    "deep-extend": "^0.4.1",
+    "is-primitive": "^2.0.0",
+    "object.map": "^0.2.0",
+    "string-format": "^0.5.0"
+  },
+  "devDependencies": {
+    "build-changelog": "^2.1.2",
+    "istanbul": "^0.3.13",
+    "jshint": "2.4.2",
+    "opn": "^2.0.0",
+    "scotch-tape": "^0.2.1"
+  },
+  "scripts": {
+    "changelog-major": "build-changelog --major",
+    "changelog-minor": "build-changelog --minor",
+    "changelog-patch": "build-changelog --patch",
+    "cover": "istanbul cover --report cobertura --print detail tape -- test/index.js",
+    "fast-test": "tape test/index.js",
+    "lint": "jshint --verbose .",
+    "precommit": "npm test -s",
+    "prepush": "npm test -s",
+    "test": "npm run lint -s && npm run cover -s",
+    "view-cover": "istanbul report html && opn ./coverage/index.html"
+  },
+  "homepage": "https://github.com/rajeshsegu/string-format-x#readme",
+  "directories": {
+    "test": "test"
+  },
+  "license": "MIT"
+}
